@@ -19,8 +19,7 @@ public class HomeWork1 {
             }
             else if(guess < RandomNumber){
                 System.out.println("Your number is too small. Please, try again.");
-            }
-            else if(guess > RandomNumber){
+            } else if (guess > RandomNumber) {
                 System.out.println("Your number is too big. Please, try again.");
             }
         }

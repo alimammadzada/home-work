@@ -20,7 +20,7 @@ public class HomeWork3 {
         schedule[5][1] = "do houseworks";
         schedule[6][0] = "Saturday";
         schedule[6][1] = "do sports";
-        //loop
+        //loopK
         for (; ; ) {
             String userInput = s.nextLine().toLowerCase().trim();
             if (userInput.equals("sunday")) {

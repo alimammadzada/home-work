@@ -19,7 +19,7 @@ public class HomeW2 {
         boolean won = false;
         Scanner scan = new Scanner(System.in);
         int [][] a = new int[rowMax][colMax];
-        char [][] c = new char[rowMax][colMax];
+        String [][] c = new String[rowMax][colMax];
         int[] line = new int[a.length];
 
         //calculation
@@ -33,12 +33,17 @@ public class HomeW2 {
                         if(row == 0 || col == 0){
                             System.out.print(a[row][col] + " ");
                         }
+                        else if(row == guessHeight && col == guessWidth){
+                            c[row][col]= "*";
+                            System.out.print(c[row][col] + " ");
+                        }
                         else if(row == WIDTH && col == HEIGHT){
-                            c[row][col]= 'X';
+                            c[row][col]= "X";
                             System.out.print(c[row][col] + " ");
                         }
                         else{
-                            System.out.print("- ");
+                            c[row][col] = "-";
+                            System.out.print(c[row][col] + " ");
                         }
                     }
                     System.out.println();
@@ -53,11 +58,12 @@ public class HomeW2 {
                             System.out.print(a[row][col] + " ");
                         }
                         else if(row == guessHeight && col == guessWidth){
-                            c[row][col]= '*';
+                            c[row][col]= "*";
                             System.out.print(c[row][col] + " ");
                         }
                         else{
-                            System.out.print("- ");
+                            c[row][col] = "-";
+                            System.out.print(c[row][col] + " ");
                         }
                     }
                     System.out.println();

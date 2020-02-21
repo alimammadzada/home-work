@@ -18,7 +18,7 @@ public class tesssst {
         boolean won = false;
         Scanner scan = new Scanner(System.in);
         int [][] a = new int[rowMax][colMax];
-        char [][] c = new char[rowMax][colMax];
+        String [][] c = new String[rowMax][colMax];
         int[] line = new int[a.length];
 
         //calculation
@@ -31,11 +31,11 @@ public class tesssst {
                     System.out.print(a[row][col] + " ");
                 }
                 else if(guessHeight == HEIGHT && guessWidth == WIDTH){
-                    c[row][col]= '*';
+                    c[row][col]= "*";
                     System.out.print(c[row][col] + " ");
                 }
                 else if(row == HEIGHT && col == WIDTH){
-                    c[row][col]= 'X';
+                    c[row][col]= "X";
                     System.out.println("Congratulations,");
                     System.out.print(c[row][col] + " ");
                 }

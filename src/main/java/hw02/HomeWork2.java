@@ -17,7 +17,7 @@ public class HomeWork2 {
         boolean won = false;
         Scanner scan = new Scanner(System.in);
         int [][] a = new int[rowMax][colMax];
-        char [][] c = new char[rowMax][colMax];
+        String [][] c = new String[rowMax][colMax];
         int[] line = new int[a.length];
 
         //calculation
@@ -28,15 +28,16 @@ public class HomeWork2 {
                 for (int row = 0; row < rowMax; row++) {
                     for (int col = 0; col < colMax; col++) {
                         a[row][col] = row + col;
-                        if(row == 0 || col == 0){
-                            System.out.print(a[row][col] + " ");
+                        if(row == 0 && col == 0 && c[row][col].equals("*") ){
+                            System.out.print(a[row][col] + "|");
                         }
                         else if(row == WIDTH && col == HEIGHT){
-                            c[row][col]= 'X';
-                            System.out.print(c[row][col] + " ");
+                            c[row][col]= "X";
+                            System.out.print(c[row][col] + "|");
                         }
                         else{
-                            System.out.print("- ");
+                            c[row][col]= "*";
+                            System.out.print(c[row][col] + "|");
                         }
                     }
                     System.out.println();
@@ -48,14 +49,15 @@ public class HomeWork2 {
                     for (int col = 0; col < colMax; col++) {
                         a[row][col] = row + col;
                         if(row == 0 || col == 0){
-                            System.out.print(a[row][col] + " ");
+                            System.out.print(a[row][col] + "|");
                         }
                         else if(row == guessHeight && col == guessWidth){
-                            c[row][col]= '*';
-                            System.out.print(c[row][col] + " ");
+                            c[row][col]= "*";
+                            System.out.print(c[row][col] + "|");
                         }
                         else{
-                            System.out.print("- ");
+                            c[row][col]= "-";
+                            System.out.print(c[row][col] + "|");
                         }
                     }
                     System.out.println();
